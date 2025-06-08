@@ -11,13 +11,17 @@ ingredients = {
 #created by John Lexter Reyes
 def process():
     print('Coffee Menu')
+    lines()
     print('[1] Espresso\nPrice: 50.25')
+    lines()
     print('[2] Caramel Latte\nPrice: 125.0')
+    lines()
     print('[3] Cappuccino\nPrice: 200.75')
+    lines()
 def transaction_success(coffee,cash):
     print(f'Total: {menu[coffee]}')
     print(f'Cash: {cash}')
-    print('---------------------')
+    lines()
     print(f'Change: {cash - menu[coffee]}')
     return 'Your latte is ready!'
 def transaction_failure():
@@ -41,7 +45,8 @@ def loop_trigger():
     else:
         print('Shutting down the coffee machine!')
         return False
-
+def lines():
+    print('--------------------------------')
 loop = True
 
 while loop:
