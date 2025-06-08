@@ -4,9 +4,9 @@ menu = { #Dictionary for coffee menu
     'Cappuccino': 200.75
 } # for another function
 ingredients = {
-    'Water':100,
-    'Milk': 50,
-    'Coffee': 76
+    'Water':1000, #100ml per cup of coffee
+    'Milk': 1000, #50ml per cup of coffee
+    'Coffee': 1000 #76 grams per cup of coffee
 }
 #created by John Lexter Reyes
 def process():
@@ -17,6 +17,7 @@ def process():
 def transaction_success(coffee,cash):
     print(f'Total: {menu[coffee]}')
     print(f'Cash: {cash}')
+    print('---------------------')
     print(f'Change: {cash - menu[coffee]}')
     return 'Your latte is ready!'
 def transaction_failure():
@@ -36,7 +37,7 @@ def loop_trigger():
     if choice.lower() == 'yes':
         return True
     else:
-        print('Thank you for using the coffee machine!')
+        print('Shutting down the coffee machine!')
         return False
     
 loop = True
