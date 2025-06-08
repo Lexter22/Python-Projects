@@ -1,0 +1,75 @@
+menu = {
+    'Espresso': 50.25,
+    'Caramel Latte': 125.0,
+    'Cappuccino': 200.75
+}
+ingredients = {
+    'Water':100,
+    'Milk': 50,
+    'Coffee': 76
+}
+def process():
+    print('Coffee Menu')
+    print('[1] Espresso\nPrice: 50.25')
+    print('[2] Caramel Latte\nPrice: 125.0')
+    print('[3] Cappuccino\nPrice: 200.75')
+def transaction_success(coffee,cash):
+    print(f'Total: {menu[coffee]}')
+    print(f'Cash: {cash}')
+    print(f'Change: {cash - menu[coffee]}')
+    return 'Your latte is ready!'
+def transaction_failure():
+    return 'Sorry thats not enough money.Money refunded'
+def coins_count():
+    print("Please insert coins")
+    bente = float(input('Number of 20 pesos coins: '))
+    sampu = float(input('Number of 10 pesos coins: '))
+    lima = float(input('Number of 5 pesos coins: '))
+    isa = float(input('Number of 1 peso coins: '))
+    centavo = float(input('Number of 25 centavos coins: '))
+
+    total = (bente * 20) + (sampu * 10) + (lima * 5) + (isa * 1) + (centavo * 0.25)
+    return total
+def loop_trigger():
+    choice = input('Do you want to order again? (yes/no): ')
+    if choice.lower() == 'yes':
+        return True
+    else:
+        print('Thank you for using the coffee machine!')
+        return False
+    
+loop = True
+
+while loop:
+    process()
+    choice = input('Please select a coffee: ')
+    if choice == '1':
+        print('You selected Espresso')
+        print(f'{menu["Espresso"]} pesos')
+        coins = coins_count()
+        if coins >= menu['Espresso']:
+            print(transaction_success('Espresso', coins))
+        else:
+            print(transaction_failure())
+    elif choice == '2':
+        print('You selected Caramel Latte')
+        print(f'{menu["Caramel Latte"]} pesos')
+        coins = coins_count()
+        if coins >= menu['Caramel Latte']:
+            print(transaction_success('Caramel Latte', coins))
+        else:
+            print(transaction_failure())
+    elif choice == '3':
+        print('You selected Cappuccino')
+        print(f'{menu["Cappuccino"]} pesos')
+        coins = coins_count()
+        if coins >= menu['Cappuccino']:
+            print(transaction_success('Cappuccino', coins))
+        else:
+            print(transaction_failure())
+    
+    loop = loop_trigger()
+
+
+ 
+   
