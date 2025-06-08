@@ -1,13 +1,14 @@
-menu = {
+menu = { #Dictionary for coffee menu
     'Espresso': 50.25,
     'Caramel Latte': 125.0,
     'Cappuccino': 200.75
-}
+} # for another function
 ingredients = {
     'Water':100,
     'Milk': 50,
     'Coffee': 76
 }
+#created by John Lexter Reyes
 def process():
     print('Coffee Menu')
     print('[1] Espresso\nPrice: 50.25')
@@ -19,7 +20,7 @@ def transaction_success(coffee,cash):
     print(f'Change: {cash - menu[coffee]}')
     return 'Your latte is ready!'
 def transaction_failure():
-    return 'Sorry thats not enough money.Money refunded'
+    return 'Sorry thats not enough money. Money refunded'
 def coins_count():
     print("Please insert coins")
     bente = float(input('Number of 20 pesos coins: '))
