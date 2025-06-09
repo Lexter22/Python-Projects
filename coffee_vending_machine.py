@@ -10,6 +10,7 @@ ingredients = {
 }
 #created by John Lexter Reyes
 def process():
+    lines()
     print('Coffee Menu')
     lines()
     print('[1] Espresso\nPrice: 50.25')
