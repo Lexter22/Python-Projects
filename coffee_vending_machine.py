@@ -80,6 +80,6 @@ while loop:
     
     loop = loop_trigger()
 
-
+#will create a way to make these efficient by putting the data in a separate file and importing it
  
    
