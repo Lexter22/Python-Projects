@@ -1,3 +1,4 @@
+#Data Layer
 menu = { #Dictionary for coffee menu
     'Espresso': 50.25,
     'Caramel Latte': 125.0,
@@ -8,6 +9,7 @@ ingredients = {
     'Milk': 1000, #50ml per cup of coffee
     'Coffee': 1000 #76 grams per cup of coffee
 }
+#UI Layer
 #created by John Lexter Reyes
 def process():
     lines()
