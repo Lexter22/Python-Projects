@@ -11,6 +11,8 @@ ingredients = {
 }
 #UI Layer
 #created by John Lexter Reyes
+def lines():
+    print('--------------------------------')
 def process():
     lines()
     print('Coffee Menu')
@@ -48,8 +50,6 @@ def loop_trigger():
     else:
         print('Shutting down the coffee machine!')
         return False
-def lines():
-    print('--------------------------------')
 loop = True
 
 while loop:
@@ -79,7 +79,8 @@ while loop:
             print(transaction_success('Cappuccino', coins))
         else:
             print(transaction_failure())
-    
+    else:
+        print('Try again')
     loop = loop_trigger()
 
 #will create a way to make these efficient by putting the data in a separate file and importing it
