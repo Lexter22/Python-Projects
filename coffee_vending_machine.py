@@ -84,5 +84,5 @@ while loop:
     loop = loop_trigger()
 
 #will create a way to make these efficient by putting the data in a separate file and importing it
- 
+ #commenting in my brand new macbook air m4
    
